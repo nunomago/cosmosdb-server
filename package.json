@@ -9,14 +9,13 @@
   "files": [
     "cert.pem",
     "key.pem",
-    "lib",
-    "tsconfig.json"
+    "lib"
   ],
   "bin": {
     "cosmosdb-server": "lib/cli.js"
   },
   "scripts": {
-    "build": "tsc --build",
+    "build": "tsc",
     "prepack": "npm run build",
     "postinstall": "npm run build",
     "format": "prettier --ignore-path .gitignore --write '{src/**/*.ts,test/*.ts}'",
