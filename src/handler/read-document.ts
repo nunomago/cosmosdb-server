@@ -82,7 +82,7 @@ export default (
 
     for (let i = 0; i <= collectionKeys.length; i += 1) {
       const path = collectionKeys[i] as keyof typeof data;
-      if (data[path] !== clientKeys[i]) {
+      if (data && data[path] !== clientKeys[i]) {
         res.statusCode = 404;
         return {
           code: "NotFound",
